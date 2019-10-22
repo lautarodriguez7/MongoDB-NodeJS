@@ -1,7 +1,39 @@
+<% include partials/_header %>
+
 
 <nav class='navbar navbar-dark bg-dark mb-4' >
 <a href="/" class='navbar-brand'>CRUD NodeMongo</a>
 </nav>
 <div class='container'>
-    <h1>Hello World!</h1>
+    <div class='row'>
+        <div class='card'>
+            <div class='card-body'>
+                <form action="/add" method="POST">
+                    <div class='form-group'>
+                        <input type='text' name='title' placeholder='Insert a Title' class='form-control'>    
+                    </div>
+                    <div class='form-group'>
+                        <textarea name='description' cols='30' placeholder='Insert a description'></textarea>
+                       </div> 
+                        <button type='submit' class='btn btn-primary btn-block'>
+                            Add
+                        </button>
+                </form>
+            </div>
+        </div>    <div class='col-md-7'>
+        <table class='table table-borderend table-hover'>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Title</th>
+                    <th>description</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    </div>
+
 </div>
+
+<% include partials/_footer %>
