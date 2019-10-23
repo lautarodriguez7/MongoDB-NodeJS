@@ -1,0 +1,26 @@
+<% include partials/_header %>
+
+<pre>
+    <%= task %>
+</pre>
+
+<!-- Form -->
+<div class='col-md-5'>
+    <div class='card'>
+        <div class='card-body'>
+            <form action='/add' method='POST'>
+                <div>
+                    <input type='text' name='title' placeholder='Insert a title' class='form-control'>
+                </div>
+                <div clasS='form-group'>
+                    <textarea name='description' cols='80' class='form-control' placeholder='Insert a Description'><%= task.description%></textarea>
+                </div>
+                <button type='submit' class='btn btn-primary btn-block'>
+                    Add
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/_footer %>
